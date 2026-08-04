@@ -1,76 +1,67 @@
-# Aircraft Permit Reminder Automation
+# ✈️ Aircraft Permit Reminder Automation
 
-An automated aircraft permit monitoring and reminder system built with n8n.
+> An automated aircraft permit monitoring and notification system built with **n8n**, **Google Sheets**, **Gmail**, and **JavaScript**.
 
-## Overview
+## 📌 Overview
 
-This project automates the monitoring of aircraft permits and their expiration dates. It uses n8n to process permit information stored in Google Sheets, determine the current status of each permit, and send automated email reminders when action is required.
+The Aircraft Permit Reminder Automation is a workflow automation solution designed to monitor aircraft permit expiration dates and automatically notify responsible personnel when action is required.
 
-The workflow was designed to reduce manual monitoring and help ensure that important aviation permits are not overlooked.
+The system reads aircraft permit records from Google Sheets, calculates the remaining validity period, determines the permit status, checks whether a reminder is required, sends automated email notifications, and updates the permit record.
 
-## Key Features
+The project demonstrates how workflow automation can be applied to aviation operations and compliance monitoring.
 
-- Aircraft permit expiry monitoring
-- Automatic permit status calculation
-- Expired permit detection
-- Upcoming expiry alerts
-- Automated email reminders
-- Duplicate reminder prevention
-- Last reminder tracking
-- Google Sheets integration
-- JavaScript-based workflow logic
-- Automated status updates
+---
 
-## Technologies 
+## 🎯 Problem
 
-- n8n
-- JavaScript
-- Google Sheets
-- Gmail
-- Webhooks
-- JSON
-- Workflow Automation
+Aircraft permits and operational documents have expiration dates that need to be monitored carefully.
 
-## Workflow
+Manual monitoring can result in:
 
-The general workflow is:
+- Missed expiry dates
+- Late renewals
+- Repetitive administrative work
+- Inconsistent reminder processes
+- Duplicate notifications
 
-Google Sheets
-↓
-Read Aircraft Permit Data
-↓
-Check Expiry Date
-↓
-Calculate Permit Status
-↓
-Determine Whether Reminder Is Required
-↓
-Check for Duplicate Reminder
-↓
-Send Email
-↓
-Update Google Sheets
+This automation addresses these problems by continuously processing permit records and applying predefined reminder rules.
 
-## Example Status Logic
+---
 
-| Condition | Status |
-|---|---|
-| Permit has expired | Expired |
-| Expiry is approaching | Urgent |
-| Permit is sufficiently valid | Safe |
+## 💡 Solution
 
-## Business Value
+The workflow automates the complete reminder process:
 
-The automation helps reduce manual administrative work by automatically monitoring permit expiry dates and notifying responsible personnel when action is required.
-
-It also reduces the risk of sending duplicate notifications by maintaining reminder history.
-
-## Project Purpose
-
-This project demonstrates practical application of workflow automation to aviation operations and compliance processes.
-
-## Author
-
-**Prince Jeremiah**
-
-AI Automation Engineer | n8n Developer | Aviation Operations
+```text
+Aircraft Permit Data
+        │
+        ▼
+┌─────────────────────┐
+│    Google Sheets    │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ Calculate Days Left  │
+│ & Permit Status      │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ Reminder Required?  │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ Duplicate Check     │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ Gmail Notification  │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ Update Google Sheet │
+└─────────────────────┘
