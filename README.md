@@ -21,7 +21,7 @@ The workflow was designed to reduce manual monitoring and help ensure that impor
 - JavaScript-based workflow logic
 - Automated status updates
 
-## Technologies
+## Technologies 
 
 - n8n
 - JavaScript
