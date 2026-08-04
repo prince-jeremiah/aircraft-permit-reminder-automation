@@ -26,7 +26,6 @@ Manual monitoring can result in:
 
 The workflow automates the complete reminder process:
 
-```text
 Google Sheets
      ↓
 Read Permit Data
@@ -130,7 +129,6 @@ A demonstration dataset is included in `sample-aircraft-permit-data.csv`.
 
 ## 📁 Repository Structure
 
-```text
 aircraft-permit-reminder-automation/
 │
 ├── README.md
