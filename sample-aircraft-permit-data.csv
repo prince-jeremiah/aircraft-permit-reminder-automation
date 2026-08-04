@@ -1,0 +1,4 @@
+Registration,Aircraft Type,Permit Type,Issue Date,Expiry Date,Responsible Email,Status,Reminder Status,Last Reminder Sent
+5N-ABC,AW109SP,PNCF,2026-01-15,2026-08-20,maintenance@example.com,Active,,
+5N-XYZ,Beechcraft King Air,PNCF,2026-02-01,2026-08-10,maintenance@example.com,Due Soon,,
+5N-DEMO,Cessna Citation,PNCF,2026-01-01,2026-07-20,maintenance@example.com,Expired,,
